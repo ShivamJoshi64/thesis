@@ -1,0 +1,88 @@
+/bin
+  - common executables available for everyone, ex. cp rm ls
+  
+  
+/boot
+  - kernel and boot configuration files - ex. grub, ram disk images, compressed linux kernel
+  
+  
+/dev
+  - files which POINT to both physical - {Hardware (ex. sda)} and pseudo devices(ex. randomu)
+  * everything in Linux is a file, even hardware, sda is physical hardware, it is hard drive, 
+  * randomu is psuedo random yte generator. (if you don't have a physical random byte generator)
+  
+  
+/etc
+  - system and program software configuration files. ex. rosdep in ros
+  
+  
+/home
+  - non-root user home directories, contains whatever the user wants to put in it.
+  
+  
+/lib
+  /lib32
+  /lib64
+  - library files used by the system, include .so (shared obejct) files and others
+  
+  
+/lost+found
+  - saved files due to failure, used by fsck to find and recover files after file system corruption.
+  
+  
+/media
+  - auto-mounting place for certain external devices on some distros, like when using USB
+  
+  
+/mnt
+  - place to mount various file systems like local disks, network disks, 
+  * unlike windows there no concept of drives( C, D, E) so when you mount a new hard drive you can go to /mnt to do so..
+  
+  
+/opt
+  - various software, which maybe you created. 
+  
+  
+/proc
+  - virtual filesystem for resources, processes, and more
+  *has a folder for every process in the system, and many other files specific to the process: memStat, miscellaneous,modeules ...
+  
+  
+/root [ not to be confused with root directory i.e. / ]
+  - root user home directory  
+  
+  
+/sbin
+  - similar to /bin, but for system administrators, ex. fdisk
+  
+  
+/tmp
+  - temporary file storage, wiped out after reboot
+  
+  
+/usr
+  - user programs, library files, docs, etc., ex. obs
+  - similar to mini Linux-flie system geared more towards user programs and user operations
+  * excutables in usr/bin folder will override those in /bin folder i.e. if you have an executable ls in /usr/bin the system will run that instead on normal ls (from /bin)
+  
+  
+/var
+  - variable files for various purposes, ex. logs - syslogx, org log; tz data
+  
+  
+/vmlinuz -> boot/vmlinuz-4.15.0-43-generic
+  - compressed linux kernel
+  
+  
+  
+  
+ 
+Shared Libraries ( *.so files ) : if our application utilizes a shared library our application is going to reference that library exactly when it needs to reference that library when it's running so let's just take an example of this when our application needs to print something to the screen it's going to reference another shared library on the computer that knows how to print something to the screen and let that handle it and none of that code that's doing the printing actually lives in our application it lives in that shared library all we have to do is reference that library when we need to print something in that other library is just going to handle it 
+
+  
+ Static Library ( *.a files ) : static libraries which is almost the complete opposite of a shared library and let's just talk through it the first thing video to understand is that our program is going to utilize a static library at compile time and remember compile time is before run time something has to be compiled before you can even run it alright 
+ 
+TO-DO: Symbolic link, Snap. . .
+  
+  
+  ***************************************************************END*****************************************************************
